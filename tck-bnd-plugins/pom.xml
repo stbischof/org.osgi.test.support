@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.osgi</groupId>
+		<artifactId>org.osgi.test.support.reactor</artifactId>
+		<version>${revision}</version>
+	</parent>
+	<groupId>org.osgi.tck</groupId>
+	<artifactId>tck-bnd-plugins</artifactId>
+	<description>bnd build plugins for the OSGi TCK builds (SignatureTest,
+		TCKPackaging) — the classes from cnf/src of the osgi/osgi
+		monorepo</description>
+
+	<!-- Plain jar for the bnd-maven-plugin classpath of the tck-cases
+	     modules (default-package classes, exactly as the workspace build
+	     compiled them from cnf/src) — deliberately no bnd bundling. -->
+	<dependencies>
+		<dependency>
+			<groupId>biz.aQute.bnd</groupId>
+			<artifactId>biz.aQute.bndlib</artifactId>
+			<version>${bnd.old.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
